@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/ico/favicon-16x16.png">
+    <title> Exame do Cádmio </title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3e3c691653.js" crossorigin="anonymous"></script>
+    <!--CSS/Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <!-- Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </script>
+    <script type="text/javascript" src="js/nativo.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <h2><a class="navbar-brand" href="https://www.cbt.ifsp.edu.br"><img class="iflogo" src="img/iflogo.jpg" alt="logo" /></img></a><a href="index.html">Exame Do Cádmio</a></h2>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <h4><a class="nav-link active" href="intro.html">Sobre</a></h4>
+                </li>
+                <li class="nav-item">
+                    <h4><a class="nav-link active" href="intro.html#objetivo">Metodologia</a></h4>
+                </li>
+                <li class="nav-item">
+                    <h4><a class="nav-link active" href="resultados.html">Resultados</a></h4>
+                </li>
+                <li class="nav-item">
+                    <h4><a class="nav-link active" href="feedback.html">Feedback</a></h4>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <form id="faleconosco" name="faleconosco" method="POST"
+            action="mailto:cesar.rago@ifsp.edu.br">
+        
+        <h2>Quer Saber Mais? Quer Contribuir? Fale Conosco</h2>
+        <fieldset name="dadospessoais" form="faleconosco">
+            <legend> Dados Pessoais</legend>
+            <p><input type ="text" id="datahora" name="hoje" size="50" disabled/></p>
+            <p><label>Nome:  </label> <input type="text" id="nome" name="nome" maxlength="50" size="60" required/></p>
+            <p><label>e-mail:  </label> <input type="email" id="email" name="email" maxlength="50" size="60" autocomplete="on" required/></p>
+            <p><label>Telefone:  </label> <input type="tel" id="telefone" name="telefone" maxlength="13" size="12" /></p>            
+            <p><label>Idade:  </label> <input type="text" id="idade" name="idade" maxlength="3" size="3" required/></p>
+            <p><label>Gênero:  </label> 
+                <label for="m" >M</label> <input type="radio" id="m" name="genero" value="m" required/>
+                <label for="m" >F</label> <input type="radio" id="f" name="genero" value="f" required/>
+               
+            </p>
+        </fieldset>
+
+        <fieldset name="comentarios" form="faleconosco">
+            <legend>Comentários</legend>
+             <p>
+                 <label>Indique o quanto esse portal agradou:  </label>
+                 <input type="range" id="agradou" name="agradou"/>
+                 
+                 
+             </p>
+             <p>
+                 <label>Qual seu esporte preferido? </label>
+                 <select id= "idEsporte" required>
+                     <option value="">Escolha uma opção...</option>
+                     <option value="Futebol">Futebol</option>
+                     <option value="Basquete">Basquete</option>
+                     <option value="Voleibol">Voleibol</option>
+                 </select>
+                 <!--
+                 <select id = "idEsporteComOptGroup">
+                     <optgroup label="Verão">
+                        <option value="Futebol">Futebol</option>
+                        <option value="Basquete">Basquete</option>
+                        <option value="Voleibol">Voleibol</option>
+                     </optgroup>
+                     <optgroup label="Inverno">
+                        <option value="Bobsled">Bobsled</option>
+                        <option value="Voleibol">Skeleton</option>
+                        <option value="Ski">Ski</option>
+                     </optgroup>
+                 </select>
+                
+                 <input list="idEsporteComDatalist">
+
+                 <datalist id="idEsporteComDatalist">
+                    <option value="Voleibol">Voleibol</option>
+                    <option value="Futebol">Futebol</option>
+                    <option value="Handebol">Handebol</option>
+                    <option value="Atletismo">Atletismo</option>
+                    <option value="Basquete">Basquete</option>
+                 </datalist>
+                -->
+             </p>
+             <p>
+                 <label for="opiniao">Deixe aqui seus comentários: </label>
+                 <textarea id="opiniao" name="comentario" cols="60" rows="10" maxlength="500" spellcheck="true"></textarea>
+             </p>
+        </fieldset>
+
+        <div id="botoes">
+            <input type="submit" id="enviar" value="Enviar" onClick="consiste()"/>
+            <input type="reset" id="limpar" value="Limpar"/>
+        </div>   
+        </form>
+        
+    </body>
+    <footer align="center">
+        Copyright &copy; 2022 - All Rights Reserved - <a href="index.html">WikiSports</a><br>
+        Página desenvolvida por ... na disciplina DSW do curso CTII no IFSP<br>
+        Instituto Federal de Educação Ciência e Tecnologia de São Paulo - Campus Cubatão        
+    </footer>
